@@ -3,8 +3,8 @@ package com.revature.list;
 import java.util.Arrays;
 
 public class MyArrayList {
-	private int size;
-	private int[] list;
+	private int size = 1;
+	private int[] list = new int[size];
 	private int currentSize;
 
 	public void add(int val) {
