@@ -3,8 +3,8 @@ package com.revature.list;
 import java.util.Arrays;
 
 public class MyArrayList {
-	private int size = 1;
-	private int[] list = new int[size];
+	private int size;
+	private int[] list;
 	private int currentSize;
 
 	public void add(int val) {
@@ -55,6 +55,7 @@ public class MyArrayList {
 			}
 			this.currentSize--;
 		}
+		System.out.println("You are accessing element that's not there");
 		
 	}
 
@@ -63,6 +64,7 @@ public class MyArrayList {
 		if(index < this.currentSize) {
 			return this.list[index];
 		}
+		System.out.println("You are accessing element that's not there");
 		return -1;
 		
 	}
