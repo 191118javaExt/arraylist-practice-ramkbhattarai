@@ -19,16 +19,31 @@ public class Driver {
 			reglist.add(val);
 			mylist.add(val);
 		}
+		// for testing only 
+//		System.out.println("------------first case = adding elements to both arrays--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
 		
 		long t1 = System.nanoTime();
 		
 		for(int i = 0; i < AMOUNT; i++) {
 			reglist.set(i, AMOUNT % (2 * (i % 10) + 3));
 		}
+//		System.out.println("------------2nd case setting element to original array--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
+		
 		
 		for(int i = 0; i < AMOUNT; i++) {
 			reglist.remove(0);
 		}
+//		System.out.println("------------3rd case removing elements from original array--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
+		
 		
 		long t2 = System.nanoTime();
 		
@@ -40,10 +55,19 @@ public class Driver {
 		for(int i = 0; i < AMOUNT; i++) {
 			mylist.set(i, AMOUNT % (2 * (i % 10) + 3));
 		}
+//		System.out.println("------------4th case setting elements to my array--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
 		
 		for(int i = 0; i < AMOUNT; i++) {
 			mylist.remove(0);
 		}
+//		System.out.println("------------5th case removing elements from my array--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
+		
 		
 		t2 = System.nanoTime();
 		
@@ -55,5 +79,11 @@ public class Driver {
 		double ratio = (double) (myTime - regTime) / (double) regTime;
 		
 		System.out.printf("The original ArrayList is %.2f%% faster.%n", ratio * 100);
+		
+		// for my purpose only
+//		System.out.println("------------last case--------------------");
+//		System.out.println("originalArray = " + reglist);
+//		System.out.println("myArray = " + mylist);
+//		System.out.println();
 	}
 }

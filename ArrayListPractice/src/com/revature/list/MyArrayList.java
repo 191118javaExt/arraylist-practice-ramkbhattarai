@@ -38,16 +38,17 @@ public class MyArrayList {
 		if(index < currentSize) {
 			this.list[index] = val;
 		}
+		//System.out.println("You can't put an element that's not there");
 		
 	}
 
 	public void remove(int index) {
 		// TODO Auto-generated method stub
 		if(index < currentSize) {
-			this.list[index]  = Integer.MIN_VALUE;
+			//this.list[index]  = Integer.MIN_VALUE;
 			int j =0;
 			for(int i = 0; i < this.currentSize; i++) {
-				if(this.list[i] == Integer.MIN_VALUE) {
+				if(i == index) {
 					i++;
 				}
 				this.list[j] = this.list[i];
@@ -55,7 +56,7 @@ public class MyArrayList {
 			}
 			this.currentSize--;
 		}
-		System.out.println("You are accessing element that's not there");
+		//System.out.println("You are removing an element that's not there");
 		
 	}
 
@@ -64,7 +65,7 @@ public class MyArrayList {
 		if(index < this.currentSize) {
 			return this.list[index];
 		}
-		System.out.println("You are accessing element that's not there");
+	//	System.out.println("You are accessing an element that's not there");
 		return -1;
 		
 	}
