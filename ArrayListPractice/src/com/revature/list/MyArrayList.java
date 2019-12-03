@@ -12,7 +12,7 @@ public class MyArrayList {
 		if(this.currentSize == 0) {
 			this.size = 1;
 			this.list = new int[this.size];
-			this.list[0] = val;
+			this.list[this.currentSize] = val;
 			this.currentSize = 1;
 		}else {
 			if(this.currentSize < 3 * size / 4) {
@@ -68,6 +68,10 @@ public class MyArrayList {
 	//	System.out.println("You are accessing an element that's not there");
 		return -1;
 		
+	}
+	
+	public int size() {
+		return this.currentSize;
 	}
 
 	@Override
